@@ -1,4 +1,4 @@
-package run.hxtia.pubwork.po;
+package run.hxtia.pubwork.pojo.po;
 
 import lombok.Data;
 

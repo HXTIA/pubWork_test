@@ -17,6 +17,11 @@
     </properties>
 
     <dependencies>
+        <!-- 导入公共的模块 -->
+        <dependency>
+            <groupId>run.hxtia</groupId>
+            <artifactId>hxtia-common</artifactId>
+        </dependency>
         <!-- 对象转换【不用写很多实体类的映射转换】 -->
         <dependency>
             <groupId>org.mapstruct</groupId>
