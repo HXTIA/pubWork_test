@@ -1,0 +1,41 @@
+# 开发环境
+spring:
+  datasource:
+    username: ${pubwork.mysql-cfg.user}
+    password: ${pubwork.mysql-cfg.psd}
+    url: jdbc:mysql://${pubwork.mysql-cfg.db-ip}:3306/test_mybatis?characterEncoding=UTF-8&serverTimezone=GMT%2B8
+  web:
+    resources:
+      static-locations:
+      # 静态资源映射位置
+server:
+  port: 8888
+
+# 日志输出等级
+logging:
+  level:
+    run.hxtia.pubwork: debug
+
+
+# 自定义配置项
+pubwork:
+  cfg:
+    # 跨域相关配置
+    cors-origins:
+      - http://localhost:8080
+      - http://localhost:8081
+
+  # 文件上传路径
+  upload:
+    base-path: D:/project_file/pubwork/
+    upload-path: upload/
+    image-path: image/
+    video-path: video/
+
+  # 数据库相关配置
+  mysql-cfg:
+    psd: root
+    user: root
+    db-ip: localhost
+
+

@@ -1,0 +1,17 @@
+spring:
+  # 数据库连接池相关配置
+  datasource:
+    druid:
+      max-wait: 5000
+      max-active: 50
+      min-idle: 5
+      initial-size: 10
+
+# mybatis-plus 配置
+mybatis-plus:
+  type-aliases-package: run.hxtia.pubwork
+  configuration:
+    use-generated-keys: true
+  global-config:
+    db-config:
+      id-type: auto

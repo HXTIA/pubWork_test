@@ -1,0 +1,13 @@
+spring:
+  profiles:
+    active: db
+  messages:
+    encoding: UTF-8
+
+# 日志输出等级
+logging:
+  level:
+    root:  error
+    org.springframework:  error
+    com.baomidou.mybatisplus:  info
+    run.hxtia.pubwork.mappers:  error
