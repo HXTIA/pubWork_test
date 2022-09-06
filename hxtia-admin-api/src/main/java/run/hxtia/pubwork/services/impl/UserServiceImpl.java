@@ -7,6 +7,7 @@ import org.springframework.stereotype.Service;
 import run.hxtia.pubwork.common.cache.Caches;
 import run.hxtia.pubwork.common.utils.Constants;
 import run.hxtia.pubwork.common.utils.JsonVos;
+import run.hxtia.pubwork.common.utils.Md5s;
 import run.hxtia.pubwork.mapStruct.MapStructs;
 import run.hxtia.pubwork.mappers.UserMapper;
 import run.hxtia.pubwork.pojo.po.User;
@@ -31,14 +32,16 @@ public class UserServiceImpl
         wrapper.eq(User::getEmail, reqVo.getEmail());
         User userPo = baseMapper.selectOne(wrapper);
 
+        // 验证邮箱
         if (userPo == null) {
             return JsonVos.raise(CodeMsg.WRONG_USERNAME);
         }
 
-        if (!userPo.getPassword().equals(reqVo.getPassword())) {
-            return JsonVos.raise(CodeMsg.WRONG_PASSWORD);
-        }
+        // 验证密码
+        boolean verify = Md5s.verify(reqVo.getPassword(), Md5s.md5key, userPo.getPassword());
+        if (!verify) return JsonVos.raise(CodeMsg.WRONG_PASSWORD);
 
+        // 用户状态
         if (userPo.getState() == Constants.UserStatus.UNABLE) {
             return JsonVos.raise(CodeMsg.USER_LOCKED);
         }
