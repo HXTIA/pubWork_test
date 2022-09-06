@@ -9,7 +9,6 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import run.hxtia.pubwork.common.filter.ErrorFilter;
 import run.hxtia.pubwork.common.prop.PubWorkProperties;
-
 import javax.servlet.Filter;
 import java.util.HashMap;
 import java.util.LinkedHashMap;
