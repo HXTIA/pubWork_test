@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import run.hxtia.pubwork.common.base.BaseController;
+import run.hxtia.pubwork.common.baseController.BaseController;
 import run.hxtia.pubwork.common.utils.Streams;
 import run.hxtia.pubwork.mapStruct.MapStructs;
 import run.hxtia.pubwork.pojo.po.Skill;

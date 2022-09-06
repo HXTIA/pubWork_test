@@ -1,4 +1,4 @@
-package run.hxtia.pubwork.common.base;
+package run.hxtia.pubwork.common.baseController;
 
 import com.baomidou.mybatisplus.extension.service.IService;
 import io.swagger.annotations.ApiOperation;
