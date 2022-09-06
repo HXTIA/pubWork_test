@@ -7,6 +7,7 @@ import org.apache.shiro.web.mgt.DefaultWebSecurityManager;
 import org.springframework.aop.framework.autoproxy.DefaultAdvisorAutoProxyCreator;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import run.hxtia.pubwork.common.filter.ErrorFilter;
 import run.hxtia.pubwork.common.prop.PubWorkProperties;
 
 import javax.servlet.Filter;
@@ -47,7 +48,8 @@ public class ShiroConfig {
         // 放行获取静态资源的URI
         uriMap.put("/" + properties.getUpload().getUploadPath() + "**", "anon");
 
-        //TODO: 放行处理Filter内部异常的请求
+        // 放行处理Filter内部异常的请求
+        uriMap.put(ErrorFilter.ERROR_URI, "anon");
 
         // 其他 URI 使用自定义的 filter
         uriMap.put("/**", "token");
