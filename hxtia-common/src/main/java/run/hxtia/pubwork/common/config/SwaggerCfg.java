@@ -7,6 +7,7 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.core.env.Environment;
 import org.springframework.core.env.Profiles;
+import run.hxtia.pubwork.common.shiro.TokenFilter;
 import springfox.documentation.builders.ApiInfoBuilder;
 import springfox.documentation.builders.PathSelectors;
 import springfox.documentation.builders.RequestHandlerSelectors;
@@ -42,12 +43,21 @@ public class SwaggerCfg implements InitializingBean {
     private boolean enable;
 
     @Bean
+    public Docket userDocket() {
+        return groupDocket(
+            "01_用户",              // 分组模块
+            "/users.*",             // 正则表达式，想要的模块。
+            "用户模块文档",          // 模块标题
+            "测试文档");        // 描述信息
+    }
+
+    @Bean
     public Docket skillDocket() {
         return groupDocket(
-                "01_技巧",              // 分组模块
-                "/skills.*",             // 正则表达式，想要的模块。
-                "技巧模块文档",          // 模块标题
-                "测试文档");        // 描述信息
+                "02_技巧",
+                "/skills.*",
+                "技巧模块文档",
+                "测试文档");
     }
 
     // 构建分组模块
@@ -69,7 +79,7 @@ public class SwaggerCfg implements InitializingBean {
     private Docket baseDocket() {
         // 每个接口都要传token
         RequestParameter token = new RequestParameterBuilder()
-                .name("Token")
+                .name(TokenFilter.HEADER_TOKEN)
                 .description("用户登录令牌")
                 .in(ParameterType.HEADER)
                 .build();

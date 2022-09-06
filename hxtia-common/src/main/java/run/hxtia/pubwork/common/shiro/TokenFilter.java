@@ -3,6 +3,7 @@ package run.hxtia.pubwork.common.shiro;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.shiro.SecurityUtils;
 import org.apache.shiro.web.filter.AccessControlFilter;
+import run.hxtia.pubwork.common.cache.Caches;
 import run.hxtia.pubwork.common.utils.JsonVos;
 import run.hxtia.pubwork.pojo.vo.result.CodeMsg;
 
@@ -31,8 +32,8 @@ public class TokenFilter extends AccessControlFilter {
         // 如果没有Token
         if (token == null) return JsonVos.raise(CodeMsg.NO_TOKEN);
 
-        //TODO: 取出缓存的Token
         // 如果Token过期了
+        if (Caches.getToken(token) == null) return JsonVos.raise(CodeMsg.TOKEN_EXPIRED);
 
         //TODO: 这里决定是否需要去鉴权
         SecurityUtils.getSubject().login(new Token(token));

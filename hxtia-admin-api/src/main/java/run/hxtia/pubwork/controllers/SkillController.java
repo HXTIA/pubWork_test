@@ -24,7 +24,7 @@ import java.util.function.Function;
 
 @RestController
 @Api(tags = "SkillController")
-@Tag(name = "SkillController", description = "首页内容管理")
+@Tag(name = "SkillController", description = "技巧模块")
 @RequestMapping("/skills")
 public class SkillController extends BaseController<Skill, SkillReqVo> {
 
