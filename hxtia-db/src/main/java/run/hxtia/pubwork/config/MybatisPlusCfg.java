@@ -7,6 +7,9 @@ import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
+/**
+ * 使用MybatisPlus，额外配置
+ */
 @Configuration
 @MapperScan("run.hxtia.pubwork.mappers")
 public class MybatisPlusCfg {

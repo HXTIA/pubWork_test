@@ -1,6 +1,7 @@
 package run.hxtia.pubwork.common.utils;
 
 
+import run.hxtia.pubwork.common.exception.CommonException;
 import run.hxtia.pubwork.pojo.vo.result.*;
 
 /**
@@ -61,5 +62,13 @@ public class JsonVos {
         return pageJsonVo;
     }
 
-    //TODO: 快速抛出异常
+    // 快速抛出异常
+    public static <T> T raise(String msg) throws CommonException {
+        throw new CommonException(msg);
+    }
+
+    public static <T> T raise(CodeMsg codeMsg) throws CommonException {
+        throw new CommonException(codeMsg);
+    }
+
 }

@@ -1,5 +1,6 @@
 spring:
-  # 数据库连接池相关配置
+  # 1、数据库连接池相关配置
+  # 2、https://github.com/alibaba/druid/wiki/DruidDataSource%E9%85%8D%E7%BD%AE%E5%B1%9E%E6%80%A7%E5%88%97%E8%A1%A8
   datasource:
     druid:
       max-wait: 5000
@@ -7,7 +8,8 @@ spring:
       min-idle: 5
       initial-size: 10
 
-# mybatis-plus 配置
+# 1、mybatis-plus 配置
+# 2、https://github.com/baomidou/mybatis-plus
 mybatis-plus:
   type-aliases-package: run.hxtia.pubwork.pojo
   configuration:

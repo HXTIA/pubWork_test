@@ -12,7 +12,8 @@ import run.hxtia.pubwork.pojo.vo.response.UserVo;
 import run.hxtia.pubwork.pojo.vo.result.LoginVo;
 
 /**
- * 简单Java对象的转换【不用自己写很多 set、get】
+ * 1、简单Java对象的转换【不用自己写很多 set、get】
+ * 2、https://github.com/mapstruct/mapstruct
  */
 @Mapper(uses = {
        MapStructFormatter.class

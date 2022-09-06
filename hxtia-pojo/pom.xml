@@ -17,6 +17,12 @@
     </properties>
 
     <dependencies>
+        <!-- Mybatis-Plus -->
+        <dependency>
+            <groupId>com.baomidou</groupId>
+            <artifactId>mybatis-plus-boot-starter</artifactId>
+            <version>${mybatis-plus.version}</version>
+        </dependency>
         <!-- swagger 接口文档 -->
         <dependency>
             <groupId>io.springfox</groupId>

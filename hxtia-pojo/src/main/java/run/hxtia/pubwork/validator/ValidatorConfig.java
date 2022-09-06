@@ -8,7 +8,8 @@ import javax.validation.Validation;
 import javax.validation.Validator;
 
 /**
- * 后端验证的配置：快速失败【若验证失败，立即抛出异常】
+ * 1、后端验证的配置：快速失败【若验证失败，立即抛出异常】
+ * 2、https://github.com/hibernate/hibernate-validator
  */
 @Configuration
 public class ValidatorConfig {
