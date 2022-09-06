@@ -22,6 +22,11 @@
             <groupId>run.hxtia</groupId>
             <artifactId>hxtia-db</artifactId>
         </dependency>
+        <!-- 导入common模块 -->
+        <dependency>
+            <groupId>run.hxtia</groupId>
+            <artifactId>hxtia-common</artifactId>
+        </dependency>
     </dependencies>
 
 </project>

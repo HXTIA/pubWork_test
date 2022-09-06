@@ -29,17 +29,18 @@ public interface MapStructs {
     （2）target：目标对象
     （3）qualifiedBy：找转换器中的方法
     */
-   @Mapping(source = "createdTime",
+   @Mapping(
+       source = "createdTime",
        target = "createdTime",
        qualifiedBy = MapStructFormatter.Date2Millis.class)
    SkillVo po2vo(Skill po);
 
     @Mapping(source = "createdTime",
-            target = "createdTime",
-            qualifiedBy = MapStructFormatter.Date2Millis.class)
+        target = "createdTime",
+        qualifiedBy = MapStructFormatter.Date2Millis.class)
     @Mapping(source = "loginTime",
-            target = "loginTime",
-            qualifiedBy = MapStructFormatter.Date2Millis.class)
+        target = "loginTime",
+        qualifiedBy = MapStructFormatter.Date2Millis.class)
     UserVo po2vo(User po);
 
     LoginVo po2loginVo(User po);

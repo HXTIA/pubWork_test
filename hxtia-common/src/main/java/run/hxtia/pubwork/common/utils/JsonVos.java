@@ -1,8 +1,11 @@
-package run.hxtia.pubwork.utils;
+package run.hxtia.pubwork.common.utils;
 
 
 import run.hxtia.pubwork.pojo.vo.result.*;
 
+/**
+ * controller中统一返回的包装类
+ */
 public class JsonVos {
 
     // 消息 + 错误码【400】

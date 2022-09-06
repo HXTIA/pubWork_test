@@ -17,6 +17,11 @@
     </properties>
 
     <dependencies>
+        <!-- 导入 Pojo 模块 -->
+        <dependency>
+            <groupId>run.hxtia</groupId>
+            <artifactId>hxtia-pojo</artifactId>
+        </dependency>
         <!-- MD5依赖 -->
         <dependency>
             <groupId>org.apache.commons</groupId>
@@ -33,18 +38,6 @@
             <groupId>commons-fileupload</groupId>
             <artifactId>commons-fileupload</artifactId>
             <version>${commons-fileupload.version}</version>
-        </dependency>
-        <!-- swagger 接口文档 -->
-        <dependency>
-            <groupId>io.springfox</groupId>
-            <artifactId>springfox-boot-starter</artifactId>
-            <version>${springfox.version}</version>
-        </dependency>
-        <!-- 解决Swagger访问主页时的NumberFormatException问题 -->
-        <dependency>
-            <groupId>io.swagger</groupId>
-            <artifactId>swagger-models</artifactId>
-            <version>${swagger-models.version}</version>
         </dependency>
         <!-- 缓存 -->
         <dependency>

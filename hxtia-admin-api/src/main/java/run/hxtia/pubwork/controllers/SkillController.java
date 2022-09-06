@@ -14,7 +14,7 @@ import run.hxtia.pubwork.pojo.po.Skill;
 import run.hxtia.pubwork.pojo.vo.response.SkillVo;
 import run.hxtia.pubwork.pojo.vo.result.DataJsonVo;
 import run.hxtia.pubwork.services.SkillService;
-import run.hxtia.pubwork.utils.JsonVos;
+import run.hxtia.pubwork.common.utils.JsonVos;
 
 import java.util.List;
 

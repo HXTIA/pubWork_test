@@ -1,15 +1,10 @@
 package run.hxtia.pubwork.pojo.vo.response;
 
-
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 
 
-/**
- * 用来泛型那 result包里的几个类
- *
- */
 
 @Data
 @Api("技巧")
