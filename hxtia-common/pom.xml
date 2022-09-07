@@ -17,6 +17,11 @@
     </properties>
 
     <dependencies>
+        <!-- 导入 Pojo 模块 -->
+        <dependency>
+            <groupId>run.hxtia</groupId>
+            <artifactId>hxtia-pojo</artifactId>
+        </dependency>
         <!-- MD5依赖 -->
         <dependency>
             <groupId>org.apache.commons</groupId>
@@ -28,41 +33,23 @@
             <artifactId>commons-codec</artifactId>
             <version>${commons-codec.version}</version>
         </dependency>
-        <!-- 文件上传 -->
+        <!-- 文件上传 IO -->
         <dependency>
-            <groupId>commons-fileupload</groupId>
-            <artifactId>commons-fileupload</artifactId>
-            <version>${commons-fileupload.version}</version>
+            <groupId>commons-io</groupId>
+            <artifactId>commons-io</artifactId>
+            <version>${commons-io.version}</version>
         </dependency>
-        <!-- swagger 接口文档 -->
-<!--        <dependency>-->
-<!--            <groupId>io.springfox</groupId>-->
-<!--            <artifactId>springfox-boot-starter</artifactId>-->
-<!--            <version>${springfox.version}</version>-->
-<!--        </dependency>-->
-<!--        <dependency>-->
-<!--            <groupId>io.swagger</groupId>-->
-<!--            <artifactId>swagger-annotations</artifactId>-->
-<!--            <version>${swagger-models.version}</version>-->
-<!--            <scope>compile</scope>-->
-<!--        </dependency>-->
-<!--        &lt;!&ndash; 解决Swagger访问主页时的NumberFormatException问题 &ndash;&gt;-->
-<!--        <dependency>-->
-<!--            <groupId>io.swagger</groupId>-->
-<!--            <artifactId>swagger-models</artifactId>-->
-<!--            <version>${swagger-models.version}</version>-->
-<!--        </dependency>-->
         <!-- 缓存 -->
         <dependency>
             <groupId>org.ehcache</groupId>
             <artifactId>ehcache</artifactId>
         </dependency>
         <!-- 权限控制 -->
-<!--        <dependency>-->
-<!--            <groupId>org.apache.shiro</groupId>-->
-<!--            <artifactId>shiro-spring-boot-web-starter</artifactId>-->
-<!--            <version>${shiro.version}</version>-->
-<!--        </dependency>-->
+        <dependency>
+            <groupId>org.apache.shiro</groupId>
+            <artifactId>shiro-spring-boot-web-starter</artifactId>
+            <version>${shiro.version}</version>
+        </dependency>
     </dependencies>
 
 </project>

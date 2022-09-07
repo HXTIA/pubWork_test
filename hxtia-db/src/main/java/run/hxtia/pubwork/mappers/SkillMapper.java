@@ -1,7 +1,7 @@
 package run.hxtia.pubwork.mappers;
 
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
-import run.hxtia.pubwork.po.Skill;
+import run.hxtia.pubwork.pojo.po.Skill;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;

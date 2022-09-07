@@ -2,7 +2,7 @@ package run.hxtia.pubwork.services;
 
 import com.baomidou.mybatisplus.extension.service.IService;
 import org.springframework.transaction.annotation.Transactional;
-import run.hxtia.pubwork.po.Skill;
+import run.hxtia.pubwork.pojo.po.Skill;
 
 import java.util.List;
 

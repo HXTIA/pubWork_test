@@ -17,15 +17,15 @@
     </properties>
 
     <dependencies>
-        <!-- 导入公共的模块 -->
-        <dependency>
-            <groupId>run.hxtia</groupId>
-            <artifactId>hxtia-common</artifactId>
-        </dependency>
         <!-- 导入持久层模块 -->
         <dependency>
             <groupId>run.hxtia</groupId>
             <artifactId>hxtia-db</artifactId>
+        </dependency>
+        <!-- 导入common模块 -->
+        <dependency>
+            <groupId>run.hxtia</groupId>
+            <artifactId>hxtia-common</artifactId>
         </dependency>
     </dependencies>
 

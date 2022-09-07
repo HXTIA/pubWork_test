@@ -3,7 +3,7 @@ package run.hxtia.pubwork.services.impl;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import org.springframework.stereotype.Service;
 import run.hxtia.pubwork.mappers.SkillMapper;
-import run.hxtia.pubwork.po.Skill;
+import run.hxtia.pubwork.pojo.po.Skill;
 import run.hxtia.pubwork.services.SkillService;
 
 import java.util.List;
