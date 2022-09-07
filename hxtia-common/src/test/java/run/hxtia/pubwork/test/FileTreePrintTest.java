@@ -18,7 +18,7 @@ public class FileTreePrintTest {
         String path = "D:\\JaVa\\IdeaProjects\\pub_homework";
         String fileDir = FileTreePrint.generate(
             path,
-            new HashSet<>(Arrays.asList(".idea", "target", ".git", "test"))
+            new HashSet<>(Arrays.asList(".idea", "target", ".git", "test")), true, true
         );
         System.out.print(fileDir);
     }
